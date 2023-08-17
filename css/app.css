@@ -438,7 +438,7 @@ table.container {
 }
 
 .wrapper-cards {
-  background: url("../../assets/img//bg.png");
+  background: url("./assets/img//bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -488,20 +488,20 @@ table.container {
   padding-left: 2.875rem;
   padding-right: 2.875rem;
 }
-.footer .actions {
+.footer .action {
   position: relative;
 }
-.footer .actions:after {
-  content: "";
-  display: inline-block;
+.footer .action__gif {
   position: absolute;
   right: -0.5rem;
   top: -0.5rem;
   width: 1.5rem;
   height: 1.5rem;
-  background: url("../../assets/img/gif.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+}
+.footer .action__gif img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
 }
 .footer__column {
   padding: 1rem 1rem !important;
