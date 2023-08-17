@@ -1,3 +1,5 @@
+@use "sass:math";
+@import "base/mixins";
 //  Foundation for Emails Settings
 //  ------------------------------
 //
@@ -19,7 +21,7 @@ $primary-color: #28293d;
 $secondary-color: #777777;
 $light-gray: rgba(255, 255, 255, 0.8);
 $white: #fff;
-$success-color: #06C270;
+$success-color: #06c270;
 
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -55,7 +57,7 @@ $block-grid-gutter: $global-gutter;
 // -------------
 
 $global-font-color: $white;
-$body-font-family: Arial, sans-serif;
+$body-font-family: Helvetica,Arial,sans-serif;
 $global-font-weight: normal;
 $header-color: inherit;
 $global-line-height: 125%; /* 20/16 */

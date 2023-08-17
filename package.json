@@ -6,6 +6,7 @@
   "homepage": "https://plesh9.github.io/fdt-mail",
   "main": "gulpfile.babel.js",
   "scripts": {
+    "deploy": "gulp deploy --production",
     "start": "gulp",
     "build": "gulp --production",
     "zip": "gulp zip --production",
@@ -52,6 +53,7 @@
     "gulp-uncss": "^1.0.1",
     "gulp-wrap": "^0.15.0",
     "gulp-zip": "^5.0.1",
+    "gulp-gh-pages": "^0.5.4",
     "inky": "^1.4.1",
     "lazypipe": "^1.0.1",
     "merge-stream": "^1.0.0",

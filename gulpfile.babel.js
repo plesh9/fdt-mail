@@ -15,6 +15,7 @@ import beep     from 'beepbeep';
 const $ = plugins();
 
 const sass = require('gulp-sass')(require('sass'));
+const ghPages = require('gulp-gh-pages');
 
 // Look for the --production flag
 const PRODUCTION = !!yargs.argv.production;
@@ -42,6 +43,12 @@ gulp.task('mail',
 // Build emails, then zip
 gulp.task('zip',
   gulp.series('build', zip));
+
+// Build emails, then deploy on git
+gulp.task('deploy', gulp.series('build', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+}));
 
 // Delete the "dist" folder
 // This happens every time a build starts

@@ -1,10 +1,12 @@
-@use "sass:math";
-@import "mixins";
-@import "settings";
 @import "foundation-emails";
-@import "template/template";
-@import "fonts";
+@import "base/settings";
 @import "common";
+
+body,
+html,
+.body {
+    background: #fff !important;
+}
 
 table.container {
     background: #e5eaff;
@@ -15,12 +17,22 @@ table.container {
         width: 100% !important;
     }
 }
+
+.header {
+    & .columns {
+        padding-bottom: 0;
+    }
+    & .wrapper-inner {
+        padding: toRem(20) 0;
+    }
+}
+
 .brand {
     width: toRem(184) !important;
     height: toRem(288) !important;
 }
 .wrapper-cards {
-    background: url("../../assets/img//bg.png");
+    background: url("./assets/img/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -54,6 +66,7 @@ table.container {
     }
     & span {
         font-size: toRem(12);
+        color: $white;
     }
     & img,
     & span {
@@ -67,19 +80,19 @@ table.container {
         padding-left: toRem(46);
         padding-right: toRem(46);
     }
-    & .actions {
+    & .action {
         position: relative;
-        &:after {
-            content: "";
-            display: inline-block;
+        &__gif {
             position: absolute;
             right: toRem(-8);
             top: toRem(-8);
             width: toRem(24);
             height: toRem(24);
-            background: url("../../assets/img/gif.png");
-            background-size: contain;
-            background-repeat: no-repeat;
+            & img {
+                width: toRem(24);
+                height: toRem(24);
+                object-fit: contain;
+            }
         }
     }
     &__column {
